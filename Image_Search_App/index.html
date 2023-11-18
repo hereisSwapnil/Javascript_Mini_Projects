@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Search</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-300">
+    <!-- Heading -->
+    <h1 class="text-center mt-5 text-2xl font-bold">Image Searcher</h1>
+    <p class="text-center flex gap-2 justify-center mb-10">Get the images you want on a single click <svg width="24"
+            height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M7.05139 16C4.12629 15.1008 2 12.3774 2 9.15744C2 5.20449 5.20449 2 9.15744 2C12.3774 2 15.1008 4.12629 16 7.05139"
+                stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+            <path
+                d="M6.44444 10C6.16405 9.58923 6 9.09211 6 8.55652C6 7.14459 7.14007 6 8.54642 6C9.08678 6 9.58783 6.16898 10 6.45717"
+                stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+            <path d="M22 13.3333L9 9L13.3333 22L15.5 15.5L22 13.3333Z" stroke="#141B34" stroke-width="1.5"
+                stroke-linejoin="round" />
+        </svg>
+    </p>
+    <!-- Search Bar -->
+    <!-- component -->
+    <div class='max-w-md mx-auto'>
+        <div class="relative flex items-center w-full h-12 rounded-lg focus-within:shadow-lg bg-white overflow-hidden">
+            <div class="grid place-items-center h-full w-12 text-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+            </div>
+
+            <input class="peer h-full w-full outline-none text-sm text-gray-700 pr-2" type="text" id="search"
+                placeholder="Search something.." />
+        </div>
+    </div>
+    <h3 id="heading_result" class="text-center mt-10 text-3xl">No image found</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-10 px-10" id="imgGrid">
+    </div>
+    <button id="loadMoreBtn" onclick="loadMore()"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-auto my-5 justify-center flex hidden">
+        Load More
+    </button>
+    <script src="./script.js"></script>
+</body>
+
+</html>
